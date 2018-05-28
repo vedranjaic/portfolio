@@ -1,0 +1,26 @@
+// Intro
+.page-intro {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background: 
+	radial-gradient(#efefef 4px, transparent 4px),
+	radial-gradient(#efefef 4px, transparent 4px),
+	linear-gradient(#fff 4px, transparent 0),
+	linear-gradient(45deg, transparent 74px, transparent 75px, #f4f4f4 75px, #f4f4f4 76px, transparent 77px, transparent 109px),
+	linear-gradient(-45deg, transparent 75px, transparent 76px, #f4f4f4 76px, #f4f4f4 77px, transparent 78px, transparent 109px),
+	#fff;
+	background-size: 109px 109px, 109px 109px,100% 7px, 109px 109px, 109px 109px;
+	background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+	svg {
+		width: 80vw;
+		margin-top: -30vh;
+		@include breakpoint(sm) {
+			width: 40vw;
+		}
+		path {
+			fill: $gray;
+		}
+	}
+}

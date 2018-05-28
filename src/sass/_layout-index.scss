@@ -1,0 +1,17 @@
+// Index
+a {
+	color: currentColor;
+}
+
+// Content
+.content {
+	@include breakpoint(sm) {
+		margin-left: 285px;
+	}
+	section {
+		padding: calc(#{$header-h} + 2em) 1em 1em 1em;
+		@include breakpoint(sm) {
+			padding: 5em 7em;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+// Template
+// Colors
+$gray: #465456;
+$black: #161616;
+$white: #ffffff;
+
+// Functional colors
+$functional: (
+	yellow: #ffca3a,
+	green: #8dc63f,
+	blue: #1982c4,
+	red: #ff595e
+);
+$grey: (
+	lighter: #f6f6f6,
+	light: #ededed,
+	medium: #ccc,
+	dark: #6d6d6d,
+	darker: #3c3c3c
+);
+
+// Fonts
+$font: 'Montserrat', Helvetica, sans-serif;
+
+body {
+	font-family: $font;
+}
+
+// Heading
+$header-h: 60px;
+
+// Main menu
+$main-menu-w: 300px;
+
+
+// CORE
+.container-fluid {
+	position: relative;
+	// Main navigation
+	.nav-main {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		@include breakpoint(sm) {
+			bottom: 0;
+		}
+	}
+	// Content
+	.content {
+		section {
+			min-height: 100vh;
+		}
+	}
+}
+

@@ -1,0 +1,13 @@
+// Functions
+@function functional($color) {
+	@if not map-has-key($functional, $color) {
+		@warn "Color #{$color} not found in $functional map.";
+	}
+	@return map-get($functional, $color);
+}
+@function grey($color) {
+	@if not map-has-key($grey, $color) {
+		@warn "Color #{$color} not found in $grey map.";
+	}
+	@return map-get($grey, $color);
+}

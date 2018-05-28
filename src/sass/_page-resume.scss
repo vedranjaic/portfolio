@@ -1,0 +1,136 @@
+// Resume
+.resume-timeline {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	@include breakpoint(md) {
+		flex-direction: row;
+	}
+	// &::before {
+	// 	content: '';
+	// 	display: block;
+	// 	width: 2px;
+	// 	height: 100%;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	margin-left: -1px;
+	// 	background: radial-gradient(ellipse at right, rgba(grey(medium), 1) 0%, rgba($white, 0) 85%);
+	// }
+
+	.experience,
+	.education {
+		flex: 1 1 50%;
+		padding: 0 0 0 2em;
+		.section-title {
+			margin-left: -1em;
+			margin-bottom: 1em;
+		}
+		.timeline {
+			position: relative;
+			&::before {
+				content: '';
+				display: block;
+				width: 2px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: -2em;
+				margin-left: -1px;
+				background: radial-gradient(
+					ellipse at right, 
+					rgba(grey(light), 1) 60%,
+					// rgba(grey(medium), 1) 89%,
+					rgba($white, 0) 100%);
+			}
+		}
+	}
+	.experience {
+		.timeline-item {
+			border-right: 4px solid functional(green);
+			&::before {
+				top: 1em;
+				left: -2em;
+				right: 100%;
+			}
+			&::after {
+				top: 1em;
+				left: -2em;
+				margin-top: -4px;
+				margin-left: -6px;
+			}
+		}
+		// .timeline-item {
+		// 	border-right: 4px solid functional(green);
+		// 	&::before {
+		// 		top: 1em;
+		// 		left: 100%;
+		// 		right: 0;
+		// 	}
+		// 	&::after {
+		// 		top: 1em;
+		// 		right: -3em;
+		// 		margin-top: -4px;
+		// 		margin-right: -6px;
+		// 	}
+		// }
+	}
+	.education {
+		.timeline-item {
+			border-right: 4px solid functional(green);
+			&::before {
+				top: 1em;
+				left: -2em;
+				right: 100%;
+			}
+			&::after {
+				top: 1em;
+				left: -2em;
+				margin-top: -4px;
+				margin-left: -6px;
+			}
+		}
+	}
+	.timeline {
+		&-item {
+			background-color: $white;
+			border: 1px solid darken(grey(light), 5%);
+			padding: 0 1.5em;
+			margin-bottom: 1em;
+			position: relative;
+			&::before {
+				content: '';
+				display: block;
+				height: 2px;
+				width: 2em;
+				position: absolute;
+				background-color: grey(light);
+			}
+			&::after {
+				content: '';
+				display: block;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				position: absolute;
+				background-color: $white;
+				border: 2px solid functional(green);
+			}
+		}
+		&-title {
+			font-weight: 700;
+			margin-bottom: 5px;
+			font-size: 20px;
+		}
+		&-period {
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+		&-description {
+			color: grey(dark);
+			font-size: 14px;
+		}
+	}
+}

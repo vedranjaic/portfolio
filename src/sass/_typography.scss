@@ -1,0 +1,15 @@
+// Typography
+h2 {
+	font-weight: 700;
+	letter-spacing: -1px;
+	color: $gray;
+	&.section-title {
+		font-size: 34px;
+		// margin-bottom: 1em;
+	}
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5em;
+}
